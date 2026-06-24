@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<bean class="in.scalive.beans.Account" id="acc" >
+<property name="accid" value="SV-101"></property>
+<property name="bal" value="50000"></property>
+
+</bean>
+
+
+
+
+<bean class="in.scalive.beans.Address" id="addr" >
+<property name="houseNo" value="45"></property>
+<property name="city" value="patna"></property>
+
+</bean>
+
+
+
+<bean class="in.scalive.beans.Account" id="acc2" primary="true" >
+<property name="accid" value="SV-102"></property>
+<property name="bal" value="100000"></property>
+
+</bean>
+
+
+
+
+
+<bean class="in.scalive.beans.Customer" id="custObj" autowire="constructor">
+<constructor-arg index="0" value="ayush"></constructor-arg>
+<constructor-arg index="1" value="45"></constructor-arg>
+
+
+</bean>
+
+</beans>

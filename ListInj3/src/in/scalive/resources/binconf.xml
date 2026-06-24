@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="in.scalive.beans.Student" id="stObj">
+<property name="rollno" value="101"/>
+<property name="name" value="Amit"/>
+<property name="subjects" >
+<list>
+<value>physics</value>
+<value>chemistry</value>
+<value>maths</value>
+
+</list>
+</property>
+<property name="marks" >
+             <bean class="org.springframework.beans.factory.config.ListFactoryBean">
+    
+                   <property name="targetListClass">
+                   <value>java.util.LinkedList</value>
+                   </property>
+
+                  <property name="sourceList">
+<list>
+<value>50</value>
+<value>80</value>
+<value>90</value>
+
+</list>
+                  </property>
+             </bean>
+
+
+</property>
+</bean>
+    
+
+</beans>

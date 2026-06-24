@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean class="in.scalive.beans.Company" id="cmpObj">
+<property name="compName" value="Amazon"/>
+<property name="workers" >
+<list>
+<bean class="in.scalive.beans.Employee" >
+<property name="empName" value="ajay"/>
+<property name="empId" value="101"/>
+</bean>
+
+<bean class="in.scalive.beans.Employee" >
+<property name="empName" value="chetan"/>
+<property name="empId" value="102"/>
+</bean>
+
+
+<bean class="in.scalive.beans.Employee" >
+<property name="empName" value="deepak"/>
+<property name="empId" value="103"/>
+</bean>
+</list>
+</property>
+
+</bean>
+    
+
+</beans>
